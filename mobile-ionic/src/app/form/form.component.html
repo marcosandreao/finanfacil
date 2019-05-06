@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title [hidden]="isEditMode">
+      Novo
+    </ion-title>
+    <ion-title [hidden]="!isEditMode">
+      Editar
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      {{filterLabel}}
+      <ion-button  (click)='onSubmit()'>
+        <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="formGroup" >
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input formControlName="value" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pago</ion-label>
+      <ion-checkbox formControlName="is_paid" color="secondary"></ion-checkbox>
+    </ion-item>
+    <ion-item [hidden]="isEditMode">
+      <ion-label>Repetir?</ion-label>
+      <ion-checkbox formControlName="is_repeat" color="secondary"></ion-checkbox>
+    </ion-item>
+    <ion-item [hidden]="isEditMode || !isAdvancedValue">
+      <ion-label position="floating">Quantidade</ion-label>
+      <ion-input formControlName="qty_repeat" type="number"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

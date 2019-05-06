@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FinanFácil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding [fullscreen]="true">
+  <ion-row class="logo_container">
+    <ion-text  color="dark" class="ion-margin-top ion-align-self-center ion-text-center">
+      <p><ion-icon name="timer" color="light"></ion-icon></p>
+      <ion-label class="light">Utilize sua conta google para entrar.</ion-label>
+    </ion-text>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-button (click)="login()" class="ion-align-self-center">
+      <ion-label>ENTRAR COM O GOOGLE</ion-label> <ion-icon name="logo-google"></ion-icon>
+    </ion-button>
+  </ion-row>
+</ion-content>

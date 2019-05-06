@@ -1,0 +1,19 @@
+ion-content {
+    height: 100%;
+
+    ion-button {
+        ion-icon {
+            margin-left: 1rem;
+        }
+    }
+
+    .logo_container {
+        height: 50%;
+        ion-text {
+            width: 100%;
+        }
+        ion-icon {
+            font-size: 7rem;
+        }
+    }
+}
