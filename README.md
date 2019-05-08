@@ -25,7 +25,7 @@ export const environment = {
   }
 };
 ```
-### 2.2 [Google Plus Plugin Setup](https://ionicframework.com/docs/native/google-plus)
+### 2.2 [Cordova Google Plus Plugin Setup](https://ionicframework.com/docs/native/google-plus)
 ### 2.3 [IONIC setup and run](https://ionicframework.com/docs/installation/cli) 
 ```shell
   npm install -g cordova ionic #install ionic
