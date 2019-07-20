@@ -4,6 +4,12 @@ import 'package:mobile_flutter/src/models/Installments.dart';
 import 'package:mobile_flutter/src/screens/FormBill.dart';
 
 class ListBillPage extends StatefulWidget {
+  final idUser;
+
+  ListBillPage(this.idUser);
+
+  static const String routeName = "/list";
+
   @override
   ListBillPageState createState() {
     return ListBillPageState();
@@ -106,6 +112,7 @@ class ListBillPageState extends State<ListBillPage> {
               stream: installmentsReference
                   .where('time_month', isEqualTo: month)
                   .where('time_year', isEqualTo: year)
+                  .where('userId', isEqualTo: widget.idUser)
                   .orderBy('time_day')
                   .snapshots(),
               builder: (BuildContext context,
@@ -139,6 +146,7 @@ class ListBillPageState extends State<ListBillPage> {
                   id: null,
                   month: this.month,
                   year: this.year,
+                  idUser: widget.idUser,
                 ), // O58TVNe5zlEfCR6PbSdy
               ));
           // Scaffold.of(_context).showSnackBar(SnackBar(content: Text("$result")));

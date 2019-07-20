@@ -7,11 +7,14 @@ import 'package:mobile_flutter/src/models/bill.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 
 class FormBillPage extends StatelessWidget {
+  static const String routeName = "/about";
+
   final id;
   final month;
   final year;
+  final idUser;
 
-  FormBillPage({@required this.id, this.month, this.year});
+  FormBillPage({@required this.id, this.idUser, this.month, this.year});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +33,7 @@ class FormBillPage extends StatelessWidget {
         id: id,
         month: month,
         year: year,
+        idUser: idUser,
       ),
     );
   }
@@ -39,8 +43,9 @@ class FormBill extends StatefulWidget {
   final month;
   final year;
   final id;
+  final idUser;
 
-  FormBill({@required this.id, this.month, this.year});
+  FormBill({@required this.id, this.idUser, this.month, this.year});
 
   @override
   FormBillState createState() {
@@ -206,7 +211,7 @@ class FormBillState extends State<FormBill> {
             child: MaterialButton(
               color: Colors.blue,
               textColor: Colors.white,
-              onPressed: ()  {
+              onPressed: () {
                 if (_formKey.currentState.validate()) {
                   save();
                   Navigator.pop(context, 'Salvo com sucesso');
@@ -245,7 +250,7 @@ class FormBillState extends State<FormBill> {
         "is_paid": bill.isPaid,
         "month": widget.month,
         "year": widget.year,
-        "userId": 1
+        "userId": widget.idUser
       };
 
       dynamic resp = await callable.call(data);
