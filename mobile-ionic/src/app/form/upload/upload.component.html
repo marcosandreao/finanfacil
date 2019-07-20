@@ -1,0 +1,13 @@
+<ion-button (click)='onFilePicker()' *ngIf="!snapshot">
+  Anexar arquivo <ion-icon name="attach" slot="end"></ion-icon>
+</ion-button>
+<div *ngIf="percentage | async as pct">
+
+  <progress class="progress is-info"
+            [value]="pct"
+            max="100">
+  </progress>
+
+  {{ pct | number }}%
+
+</div>

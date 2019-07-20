@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDzVoX72FYeSiXpnJWX3pUk27omb-QCrnM',
-    authDomain: 'finanfacil-9cbff.firebaseapp.com',
-    databaseURL: 'https://finanfacil-9cbff.firebaseio.com',
-    projectId: 'finanfacil-9cbff',
-    storageBucket: 'finanfacil-9cbff.appspot.com',
-    messagingSenderId: '33103523128',
-    webClientId: '33103523128-cdt09oss8ob43u80p7dj9bvimlm9n80p.apps.googleusercontent.com'
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    webClientId: ''
   }
 };
 

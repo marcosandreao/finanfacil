@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "835458538742",
+    "firebase_url": "https://pocs-5e68a.firebaseio.com",
+    "project_id": "pocs-5e68a",
+    "storage_bucket": "pocs-5e68a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835458538742:android:e62eb99a13036dab",
+        "android_client_info": {
+          "package_name": "br.com.codelab.flutter.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl1hrZGfsdoPaWwrIvEl5_Q2rO_gSndoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835458538742:android:4cc2b32163d23dda",
+        "android_client_info": {
+          "package_name": "br.com.ifam.prontuario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl1hrZGfsdoPaWwrIvEl5_Q2rO_gSndoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835458538742:android:6c12b5a06526a39e",
+        "android_client_info": {
+          "package_name": "br.com.uarini.finanfacil.flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl1hrZGfsdoPaWwrIvEl5_Q2rO_gSndoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835458538742-oh1kebjp6nh04851diu1gil1lqc692hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

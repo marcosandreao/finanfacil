@@ -30,7 +30,11 @@ exports.createBill = functions.https.onCall(async (data, context) => {
             paid_at: isPaid ? new Date() : null,
             billRef: billDocRef,
             value: data.value,
-            userId: data.userId
+            userId: data.userId,
+            name: data.name,
+            time_month: date.getMonth(),
+            time_day: date.getDate(),
+            time_year: date.getFullYear()
         };
         installments.push(obj);
 
