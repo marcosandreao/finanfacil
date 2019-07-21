@@ -15,7 +15,7 @@ exports.createBill = functions.https.onCall(async (data, context) => {
     date.setFullYear(data.year, data.month, date.getDate())
     delete data.year;
     delete data.month;
-    
+
     const billDocRef = await billRef.add(data);
 
     const installments = new Array();
@@ -50,7 +50,7 @@ exports.updateBill = functions.https.onCall(async (data, context) => {
     if (!context || !data) return 1;
 
     const docRef = await installmentRef.doc(data.id).get();
-    const oldValue: any = {...docRef.data()};
+    const oldValue: any = { ...docRef.data() };
     // caso tenha alterado o nome
     if (data.name) {
         await oldValue.billRef.update({ name: data.name });
@@ -63,4 +63,27 @@ exports.updateBill = functions.https.onCall(async (data, context) => {
         }
     }
     return docRef.ref.set(data, { merge: true });
+});
+
+exports.migrate = functions.https.onRequest(async () => {
+    const docRef = await installmentRef.get();
+    docRef.forEach(async (doc) => {
+        const _data = doc.data();
+
+        const bill = await _data.billRef.get();
+        const billData = bill.data();
+        const createdAt = _data.created_at.toDate();
+
+        const values = {
+            time_month: createdAt.getMonth()  + 1,
+            time_year: createdAt.getFullYear(),
+            time_day: createdAt.getDate(),
+            name: billData === undefined ? '' : billData.name
+        }
+
+        doc.ref.update(values);
+        console.log(values);
+    });
+
+    return true;
 });
